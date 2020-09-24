@@ -1,40 +1,30 @@
-def ft_max_num(a):
-    if a >= 0:
-        b = a % 10
-        while a > 0:
-            a = a // 10
-            if b < a % 10:
-                b = a % 10
-        return b
-    if a < 0:
-        a = a * -1
-        b = a % 10
-        while a > 0:
-            a = a // 10
-            if b < a % 10:
-                b = a % 10
-        return b
-
-
-def ft_second_max_num(a):
-    if a >= 0:
-        b = 0
-        while a > 0:
-            if b < a % 10 and (a % 10 != ft_max_num):
-                b = a % 10
-            a = a // 10
-        return b
-    if a < 0:
-        a = a * -1
-        b = 0
-        while a > 0:
-            if b < a % 10 and (a % 10 != ft_max_num)
-                b = a % 10
-            a = a // 10
-        return b
-
-
 def ft_second_simple_max_num(a):
-    if ft_max_num == ft_second_max_num:
+    b = 0
+    c = a
+    l = 0
+    if a >= 0 and a % 1 == 0:
+        while a > 0:
+            if b < a % 10:
+                b = a % 10
+            a = a // 10
+    if a < 0 and a % 1 == 0:
+        a = a * -1
+        while a > 0:
+            if b < a % 10:
+                b = a % 10
+            a = a // 10
+    if c >= 0 and c % 1 == 0:
+        while c > 0:
+            if l < c % 10 and c % 10 != b:
+                l = c % 10
+            c = c // 10
+    if c < 0 and c % 1 == 0:
+        c = c * -1
+        while c > 0:
+            if l < c % 10 and c % 10 != b:
+                l = c % 10
+            c = c // 10
+    if l == 0:
         return -1
-    return ft_second_max_num
+    if l != b:
+        return l
