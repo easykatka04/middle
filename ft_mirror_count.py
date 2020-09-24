@@ -1,29 +1,32 @@
-def ft_rev_num(a):
-    p = 0
-    k = 0
-    if a > 0:
-        while a > 0:
-            k = a % 10
-            a = a // 10
-            p = p * 10
-            p = p + k
-        return p
-    elif a < 0:
+def ft_mirror_num(a):
+    b = a
+    c = 0
+    if a < 0:
         a = -a
+        b = a
+        c = 0
         while a > 0:
-            k = a % 10
-            a = a // 10
-            p = p * 10
-            p = p + k
-        return p
+            f = a % 10
+            c = c * 10 + f
+            a //= 10
+
+        if c == b:
+            return True
+        return False
+
+    while a > 0:
+        f = a % 10
+        c = c * 10 + f
+        a //= 10
+
+    if c == b:
+        return True
+    return False
 
 
 def ft_mirror_count(a):
     n = 0
-    i = 1
-    while i <= a:
-        c = ft_rev_num(i)
-        if c == i:
-            n = n + 1
-        i = i + 1
+    for i in range(1, a + 1):
+        if ft_mirror_num(i) is True:
+            n += 1
     return n
