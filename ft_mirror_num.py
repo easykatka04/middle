@@ -13,4 +13,4 @@ def ft_mirror_num(a):
     if c == l:
         return True
     if c != l:
-        print False
+        return False
