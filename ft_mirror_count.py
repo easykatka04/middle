@@ -2,7 +2,7 @@ def ft_rev_num(a):
     p = 0
     k = 0
     if a == 0:
-       return a
+        return a
     elif a > 0:
         while a > 0:
             k = a % 10
@@ -18,12 +18,14 @@ def ft_rev_num(a):
             p = p * 10
             p = p + k
         return p
+
+
 def ft_mirror_count(a):
     n = 0
     i = 1
     while i <= a:
-       c = ft_rev_num(i)
-       if c == i:
-           n = n + 1
-       i = i + 1
+        c = ft_rev_num(i)
+        if c == i:
+            n = n + 1
+        i = i + 1
     return n

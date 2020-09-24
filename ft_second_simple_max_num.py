@@ -36,5 +36,5 @@ def ft_second_max_num(a):
 
 def ft_second_simple_max_num(a):
     if ft_max_num == ft_second_max_num:
-       return -1
+        return -1
     return ft_second_max_num

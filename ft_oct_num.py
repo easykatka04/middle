@@ -1,4 +1,4 @@
-def  ft_oct_num(a):
+def ft_oct_num(a):
     c = 0
     if a >= 0:
         while a > 0:

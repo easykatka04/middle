@@ -14,6 +14,8 @@ def ft_max_num(a):
             if b < a % 10:
                 b = a % 10
         return b
+
+
 def ft_second_max_num(a):
     if a >= 0:
         b = 0

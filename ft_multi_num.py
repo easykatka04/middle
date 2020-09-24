@@ -1,4 +1,4 @@
-def ft_sum_num(a):
+def ft_multi_num(a):
     b = 1
     if a >= 0:
         while a > 0:

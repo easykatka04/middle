@@ -11,6 +11,6 @@ def ft_mirror_num(a):
             c = c * 10 + a % 10
             a = a // 10
     if c == l:
-        print("TRUE")
+        return True
     if c != l:
-        print("FALSE")
+        print False
